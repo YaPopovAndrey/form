@@ -19,13 +19,13 @@
                 <h2 class="form__heading">Задайте параметры</h2>
                 <fieldset class="form__input-container form__input-container_ctrl_texts">
                     <label class="form__label" for="heading">Заголовок</label>
-                    <input type="text" class="form__item form__item_el_heading" id="heading" name="heading">
+                    <input type="text" class="form__item form__item_el_heading" id="heading" name="heading" placeholder="О чём статья?" required>
                     <label class="form__label" for="subheading">Подзаголовок</label>
-                    <input type="text" class="form__item form__item_el_subheading" id="subheading" name="subheading">
+                    <input type="text" class="form__item form__item_el_subheading" id="subheading" name="subheading" placeholder="Краткое описание" required>
                     <label class="form__label" for="main-text">Текст статьи</label>
-                    <textarea class="form__item form__item_el_main-text" id="main-text" name="main-text"></textarea>>
+                    <textarea class="form__item form__item_el_main-text" id="main-text" name="main-text" placeholder="Здесь будет основной текст вашей статьи" required></textarea>
                     <label class="form__label" for="email">E-mail</label>
-                    <input type="email" class="form__item form__item_el_email" id="email" name="email">
+                    <input type="email" class="form__item form__item_el_email" id="email" name="email" placeholder="hello@example.com">
                 </fieldset>
                 <div class="form__line"></div>
                 <fieldset class="form__input-container form__input-container_ctrl_visual">
@@ -50,10 +50,20 @@
                     </select>
                 </fieldset>
                 <fieldset class="form__input-container form__input-container_ctrl_additional">
+                  <h3 class="form__heading form__heading_type_ctrl-el-heading">Количество колонок</h3>
+                  <input type="radio" name="number-of-columns" id="one-column" value="one-column" class="form__item form__item_el_number-of-columns" checked>
+                  <label for="one-column" class="form__label form__label_direction_right">1</label>
+                  <input type="radio" name="number-of-columns" id="two-columns" value="two-columns" class="form__item form__item_el_number-of-columns">
+                  <label for="two-columns" class="form__label form__label_direction_right">2</label>
                     <label class="form__label" for="text-color">Цвет текста</label>
                     <input type="color" class="form__item form__item_el_text-color" id="text-color" name="text-color" value="#979797">
                     <label class="form__label" for="content-width">Ширина контента</label>
                     <input type="range" class="form__item form__item_el_content-width" id="content-width" name="content-width" min="30" max="80" step="10">
+                    <h3 class="form__heading form__heading_type_ctrl-el-heading">Дополнительные параметры</h3>
+                    <input type="checkbox" name="extra-option" id="black-background" value="black-background" class="form__item form__item_el_extra-options">
+                    <label for="black-background" class="form__label form__label_direction_right">Чёрный фон</label>
+                    <input type="checkbox" name="extra-option" id="bold-heading" value="bold-heading" class="form__item form__item_el_extra-options" checked>
+                    <label for="bold-heading" class="form__label form__label_direction_right">Жирный заголовок</label>
                 </fieldset>
             </div>
             <fieldset class="form__handlers">
